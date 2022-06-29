@@ -1,7 +1,8 @@
 /* eslint-disable max-len */
-import React from 'react';
+import React, { useEffect }  from 'react';
 import { Outlet } from 'react-router-dom';
 import styled from 'styled-components';
+import { useSelector } from 'react-redux';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import GlobalStyle from '../globalStyle';
@@ -37,13 +38,21 @@ const Wrapper = styled.div`
 
 
 const Layout = () => {
+  const theme = useSelector((state) => state.theme.value);
+  useEffect(() => {
+    document.title = `${
+      theme[0].toUpperCase() + theme.slice(1)
+    } | Portifolio`;
+  });
   return (
+    <>
+    <GlobalStyle/>
     <Wrapper>
-      <GlobalStyle/>
       <Header />
       <Outlet />
       <Footer />
     </Wrapper>
+    </>
   );
 };
 
