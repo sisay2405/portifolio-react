@@ -13,7 +13,10 @@ html {
 
   --imp-text-color: #c770f0;
 }
-
+.logo {
+  width: 1.5rem;
+  height: 1.5rem;
+}
 .purple {
   color: var(--imp-text-color) !important;
 }
@@ -97,7 +100,7 @@ button:focus {
 
 .navbar-toggler span {
   display: block !important;
-  background-color: #be50f4 !important;
+  background-color: #d9f450;
   height: 4px !important;
   width: 27px !important;
   margin-top: 5px !important;
@@ -154,10 +157,7 @@ button:focus {
   color: rgb(250, 250, 250) !important;
 }
 
-.logo {
-  height: 1.4em !important;
-  width: 2.5em !important;
-}
+
 
 .navbar-nav .nav-link {
   color: white !important;
@@ -194,7 +194,7 @@ button:focus {
   height: 5px;
   width: 0;
   border-radius: 16px;
-  background: #c95bf5;
+  background: #f5b25b;
   bottom: 1px;
   left: 0;
   z-index: -1;

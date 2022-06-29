@@ -2,10 +2,11 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Layout from './pages/Layout';
-// import Home from './pages/Home';
+import Projects from "./components/Projects/Projects";
+import Resume from "./components/Resume/ResumeNew";
 import Home from "./components/Home/Home";
 import Preloader from "./components/Pre";
-import AboutUs from './pages/AboutUs';
+import Aboute from './components/About/About';
 import OurHistory from './components/OurHistory';
 import OurStaff from './components/OurStaff';
 import Treasure from './components/Treasure';
@@ -33,7 +34,9 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="about" element={<AboutUs />}>
+        <Route path="/project" element={<Projects />} />
+        {/* <Route path="/resume" element={<Resume />} /> */}
+        <Route path="about" element={<Aboute />}>
           <Route path="history" element={<OurHistory />} />
           <Route path="staff" element={<OurStaff />} />
           <Route path="treasure" element={<Treasure />} />
