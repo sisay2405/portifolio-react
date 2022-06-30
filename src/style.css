@@ -11,7 +11,7 @@ html {
     rgba(12, 10, 22, 0.863)
   );
 
-  --imp-text-color: #c770f0;
+  --imp-text-color: #f0aa70;
 }
 .logo {
   width: 1.5rem;
@@ -242,7 +242,7 @@ button:focus {
     transform: rotate(0deg);
   }
 }
-#tsparticles {
+.tsparticles {
   position: fixed !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
@@ -439,7 +439,7 @@ button:focus {
 }
 
 .blockquote-footer {
-  color: #a588c0 !important;
+  color:  #f0aa70 !important;
 }
 /* --------- */
 /* Projects */

@@ -1,22 +1,94 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import {
+  AiFillGithub,
+  AiOutlineTwitter,
+  AiFillInstagram,
+} from "react-icons/ai";
+import { FaLinkedinIn } from "react-icons/fa";
 
-const FooterWrapper = styled.footer`
-  background-color: #333;
-  color: #fefefe;
-  padding: 1rem 0;
-  text-align: center;
-`;
-
-const Footer = () => {
+function Footer() {
+  let date = new Date();
+  let year = date.getFullYear();
   return (
-    <FooterWrapper>
-      &copy; {new Date().getFullYear()} Copyright: <a href="https://www.sisayareaya.com"> sisayareaya.com </a>
-    </FooterWrapper>
+    <Container fluid className="footer">
+      <Row>
+        <Col md="4" className="footer-copywright">
+          <h3>Designed and Developed by Sisay Areaya</h3>
+        </Col>
+        <Col md="4" className="footer-copywright">
+          <h3>Copyright © {year} </h3>
+        </Col>
+        <Col md="4" className="footer-body">
+          <ul className="footer-icons">
+            <li className="social-icons">
+              <a
+                href="https://github.com/sisay2405"
+                style={{ color: "white" }}
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <AiFillGithub />
+              </a>
+            </li>
+            <li className="social-icons">
+              <a
+                href="https://twitter.com"
+                style={{ color: "white" }}
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <AiOutlineTwitter />
+              </a>
+            </li>
+            <li className="social-icons">
+              <a
+                href="https://www.linkedin.com/in/sisay-areaya-0a983b6b/"
+                style={{ color: "white" }}
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <FaLinkedinIn />
+              </a>
+            </li>
+            <li className="social-icons">
+              <a
+                href="https://www.instagram.com"
+                style={{ color: "white" }}
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <AiFillInstagram />
+              </a>
+            </li>
+          </ul>
+        </Col>
+      </Row>
+    </Container>
   );
-};
+}
 
 export default Footer;
+
+// import React from 'react';
+// import styled from 'styled-components';
+
+// const FooterWrapper = styled.footer`
+//   background-color: #333;
+//   color: #fefefe;
+//   padding: 1rem 0;
+//   text-align: center;
+// `;
+
+// const Footer = () => {
+//   return (
+//     <FooterWrapper>
+//       &copy; {new Date().getFullYear()} Copyright: <a href="https://www.sisayareaya.com"> sisayareaya.com </a>
+//     </FooterWrapper>
+//   );
+// };
+
+// export default Footer;
 // import React from "react";
 // import {
 //   Box,
