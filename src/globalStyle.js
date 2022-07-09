@@ -1,36 +1,34 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-  * {
-    box-sizing: border-box;
+html {
+    --section-background-color: linear-gradient(
+      to bottom left,
+      rgba(17, 16, 16, 0.582),
+      rgba(12, 8, 24, 0.904)
+    );
+  
+    --image-gradient: linear-gradient(
+      to bottom left,
+      rgba(17, 16, 16, 0.678),
+      rgba(12, 10, 22, 0.863)
+    );
+  
+    --imp-text-color: #f0aa70;
   }
-  body {
-    // background-color: #fefefe;
-    // color: #333;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    button {
-      cursor: pointer;
-      padding: 0.5rem 2rem;
-      width: 150px;
-    }
+  .logo {
+    width: 1.5rem;
+    height: 1.5rem;
   }
-  .preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 999999;
-    background-color: #0c0513;
-    background-image: url(./Assets/pre.svg);
-    background-repeat: no-repeat;
-    background-position: center;
+  .purple {
+    color: var(--imp-text-color);
   }
   
-  .preloader-none {
-    opacity: 0;
+  button:focus {
+    box-shadow: none;
   }
+
+
 `;
 
 export default GlobalStyle;
