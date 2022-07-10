@@ -1,5 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import Navbar from "react-bootstrap/Navbar";
+import { setNavColor } from "../store/headerSlice";
+import { setExpanded } from "../store/headerSlice";
+import { useDispatch, useSelector, shallowEqual } from "react-redux";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import logo from "../Assets/sisay.jpg";
@@ -19,14 +22,16 @@ const HeaderWrapper = styled.div`
   background-color: rgb(10, 4, 22);
 `;
 function NavBar() {
-  const [expand, setExpanded] = useState(false);
-  const [navColor, setNavColor] = useState(false);
-
+  const dispatch = useDispatch();
+  const { expand, navColor } = useSelector(
+    (state) => state.search,
+    shallowEqual
+  );
   function scrollHandler() {
     if (window.scrollY >= 20) {
-      setNavColor(true);
+      dispatch(setNavColor(true));
     } else {
-      setNavColor(true);
+      dispatch(setNavColor(true));
     }
   }
 
@@ -59,7 +64,7 @@ function NavBar() {
           <Navbar.Toggle
             aria-controls="responsive-navbar-nav"
             onClick={() => {
-              setExpanded(expand ? false : "expanded");
+              dispatch(setExpanded(expand ? false : "expanded"));
             }}
           >
             <span></span>
@@ -69,7 +74,11 @@ function NavBar() {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto" defaultActiveKey="#home">
               <Nav.Item>
-                <Nav.Link as={Link} to="/" onClick={() => setExpanded(false)}>
+                <Nav.Link
+                  as={Link}
+                  to="/"
+                  onClick={() => dispatch(setExpanded(false))}
+                >
                   <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
                 </Nav.Link>
               </Nav.Item>
@@ -78,7 +87,7 @@ function NavBar() {
                 <Nav.Link
                   as={Link}
                   to="/about"
-                  onClick={() => setExpanded(false)}
+                  onClick={() => dispatch(setExpanded(false))}
                 >
                   <AiOutlineUser style={{ marginBottom: "2px" }} /> About
                 </Nav.Link>
@@ -88,7 +97,7 @@ function NavBar() {
                 <Nav.Link
                   as={Link}
                   to="/project"
-                  onClick={() => setExpanded(false)}
+                  onClick={() => dispatch(setExpanded(false))}
                 >
                   <AiOutlineFundProjectionScreen
                     style={{ marginBottom: "2px" }}
@@ -101,7 +110,7 @@ function NavBar() {
                 <Nav.Link
                   as={Link}
                   to="/resume"
-                  onClick={() => setExpanded(false)}
+                  onClick={() => dispatch(setExpanded(false))}
                 >
                   <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
                 </Nav.Link>
