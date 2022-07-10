@@ -6,9 +6,25 @@ import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
 import Toolstack from "./Toolstack";
+import styled from "styled-components";
 
+
+const Aboutwrapper = styled.section`
+ position: relative ;
+  padding-top: 150px ;
+  padding-bottom: 30px ;
+  background-image: var(--section-background-color) ;
+  color: white ;
+  .project-heading {
+    // color: white;
+    // font-size: 2.3em ;
+    // font-weight: 500 ;
+    // padding-top: 10px ;
+  }
+`
 function About() {
   return (
+    <Aboutwrapper>
     <Container fluid className="about-section">
       <Particle />
       <Container>
@@ -34,13 +50,13 @@ function About() {
             <img src={laptopImg} alt="about" className="img-fluid" />
           </Col>
         </Row>
-        <h1 className="project-heading">
+        <h1 >
           Professional <strong className="purple">Skillset </strong>
         </h1>
 
         <Techstack />
 
-        <h1 className="project-heading">
+        <h1 >
           <strong className="purple">Tools</strong> I use
         </h1>
         <Toolstack />
@@ -48,7 +64,9 @@ function About() {
         <Github />
       </Container>
     </Container>
+    </Aboutwrapper>
   );
+
 }
 
 export default About;

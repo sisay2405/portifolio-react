@@ -87,7 +87,7 @@ button:focus {
 /* --------- */
 /* Navbar Section  */
 /* --------- */
-.sticky {
+/* .sticky {
   background-color: #1b1a2ea9 !important;
   transition: all 0.3s ease-out 0s !important;
   box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
@@ -99,7 +99,7 @@ button:focus {
   transition: all 0.3s ease-out 0s !important;
   padding: 0.3rem 2rem !important;
   font-size: 1.2rem !important;
-}
+} */
 
 .navbar-toggler {
   position: relative !important;
@@ -396,11 +396,11 @@ button:focus {
   text-shadow: 0 0 2px #de6c25;
 } */
 
-.social-icons {
+/* .social-icons {
   display: inline-block !important;
   padding-right: 15px;
   padding-left: 15px;
-}
+} */
 /* 
 .icon-colour {
   color: #de6c25 !important;
@@ -409,22 +409,22 @@ button:focus {
 /* --------- */
 /* Footer */
 /* --------- */
-.footer {
+/* .footer {
   background-color: rgb(10, 4, 22);
   bottom: 0 !important;
   padding-top: 10px !important;
   padding-bottom: 8px !important ;
-}
-.footer-copywright {
+} */
+/* .footer-copywright {
   text-align: center !important;
-}
+} */
 
-.footer-body {
+/* .footer-body {
   z-index: 1;
   text-align: center !important;
-}
+} */
 
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
   .footer-copywright {
     text-align: center !important;
   }
@@ -444,11 +444,11 @@ button:focus {
   margin-top: 0.5em !important;
   margin-bottom: 0.5em !important;
   padding: 0 !important;
-}
+} */
 
-.blockquote-footer {
+/* .blockquote-footer {
   color:  #f0aa70 !important;
-}
+} */
 /* --------- */
 /* Projects */
 /* --------- */
@@ -539,26 +539,26 @@ button:focus {
   outline: none !important;
   box-shadow: none !important;
 }
-.project-heading {
+/* .project-heading {
   color: white !important;
   font-size: 2.3em !important;
   font-weight: 500 !important;
-  padding-top: 10px !important;
-}
+  padding-top: 10px !important; 
+} */
 
 /* --------- */
 /* About */
 /* --------- */
 
-.about-section {
+/* .about-section {
   position: relative !important;
   padding-top: 150px !important;
   padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
   color: white !important;
-}
+} */
 
-.tech-icons {
+/* .tech-icons {
   font-size: 4.5em !important;
   margin: 15px !important;
   padding: 10px !important;
@@ -571,9 +571,9 @@ button:focus {
   box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
   overflow: hidden !important;
   transition: all 0.4s ease 0s !important;
-}
+} */
 
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
   .tech-icons {
     margin: 10px !important;
   }
@@ -587,19 +587,19 @@ button:focus {
 .tech-icon-images {
   padding: 20px !important;
   line-height: 1.6 !important;
-}
+} */
 
-.quote-card-view {
+/* .quote-card-view {
   border: none !important;
   color: white !important;
   background-color: transparent !important;
-}
+} */
 
-.about-activity {
+/* .about-activity {
   list-style: none !important;
   text-align: left !important;
   padding-left: 1px !important;
-}
+} */
 
 @media (max-width: 767px) {
   .about-img {
