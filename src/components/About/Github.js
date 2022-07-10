@@ -1,11 +1,21 @@
 import React from "react";
 import GitHubCalendar from "react-github-calendar";
 import { Row } from "react-bootstrap";
+import styled from "styled-components";
 
+const GithubWrpper = styled.div`
+justify-conetent: center,
+padding-bottom: 10px"
+h1{
+  padding-bottom: 20px
+}
+`
 function Github() {
   return (
-    <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-      <h1 className="project-heading" style={{ paddingBottom: "20px" }}>
+    <GithubWrpper>
+    
+    <Row >
+      <h1 style={{ paddingBottom: "20px" }}>
         Days I <strong className="purple">Code</strong>
       </h1>
       <GitHubCalendar
@@ -16,6 +26,7 @@ function Github() {
         fontSize={16}
       />
     </Row>
+    </GithubWrpper>
   );
 }
 

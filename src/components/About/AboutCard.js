@@ -1,9 +1,27 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import { ImPointRight } from "react-icons/im";
+import styled from "styled-components";
 
+const  AboutCardWrapper = styled.div`
+.quote-card-view{
+  border: none ;
+  color: white ;
+  background-color: transparent ;
+}
+.about-activity {
+  list-style: none ;
+  text-align: left ;
+  padding-left: 1px ;
+}
+.blockquote-footer {
+  color:  #f0aa70 !important;
+} 
+`
 function AboutCard() {
   return (
+    <AboutCardWrapper>
+   
     <Card className="quote-card-view">
       <Card.Body>
         <blockquote className="blockquote mb-0">
@@ -34,6 +52,7 @@ function AboutCard() {
         </blockquote>
       </Card.Body>
     </Card>
+    </AboutCardWrapper>
   );
 }
 

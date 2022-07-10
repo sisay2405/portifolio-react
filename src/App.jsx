@@ -3,26 +3,26 @@ import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout";
 import Projects from "./components/Projects/Projects";
-import Resume from "./components/Resume/ResumeNew";
+// import Resume from "./components/Resume/ResumeNew";
 import Home from "./components/Home/Home";
 import Preloader from "./components/Pre";
 import Aboute from "./components/About/About";
-import OurHistory from "./components/OurHistory";
-import OurStaff from "./components/OurStaff";
+// import OurHistory from "./components/OurHistory";
+// import OurStaff from "./components/OurStaff";
 import Treasure from "./components/Treasure";
-import Services from "./pages/Services";
-import Reviews from "./pages/Reviews";
-import Contact from "./pages/Contact";
+// import Services from "./pages/Services";
+// import Reviews from "./pages/Reviews";
+// import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import "./style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
-  const [load, upadateLoad] = useState(true);
+  const [load, setLoad] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      upadateLoad(false);
+      setLoad(false);
     }, 1200);
 
     return () => clearTimeout(timer);
@@ -37,13 +37,13 @@ const App = () => {
             <Route path="/project" element={<Projects />} />
             {/* <Route path="/resume" element={<Resume />} /> */}
             <Route path="about" element={<Aboute />}>
-              <Route path="history" element={<OurHistory />} />
-              <Route path="staff" element={<OurStaff />} />
+              {/* <Route path="history" element={<OurHistory />} /> */}
+              {/* <Route path="staff" element={<OurStaff />} /> */}
               <Route path="treasure" element={<Treasure />} />
             </Route>
-            <Route path="services" element={<Services />} />
-            <Route path="reviews" element={<Reviews />} />
-            <Route path="contact" element={<Contact />} />
+            {/* <Route path="services" element={<Services />} /> */}
+            {/* <Route path="reviews" element={<Reviews />} /> */}
+            {/* <Route path="contact" element={<Contact />} /> */}
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
