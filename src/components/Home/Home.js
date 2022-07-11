@@ -6,6 +6,7 @@ import Home2 from "./Home2";
 import Type from "./Type";
 // import Particle1 from "./Particle";
 import styled from "styled-components";
+import Particle from "../Particle";
 
 const HomeWrapper = styled.div`
  .home-section {
@@ -41,8 +42,9 @@ function Home() {
   return (
   <HomeWrapper>
     <section>
+    <Particle />
       <Container fluid className="home-section" id="home">
-        {/* <Particle1 /> */}
+        {/* <Particle /> */}
         <Container className="home-content">
           <Row>
             <Col md={7} className="home-header">
