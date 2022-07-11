@@ -92,7 +92,15 @@ function NavBar() {
                   <AiOutlineUser style={{ marginBottom: "2px" }} /> About
                 </Nav.Link>
               </Nav.Item>
-
+              <Nav.Item>
+                <Nav.Link
+                  as={Link}
+                  to="/contact"
+                  onClick={() => dispatch(setExpanded(false))}
+                >
+                  <AiOutlineUser style={{ marginBottom: "2px" }} /> Contact
+                </Nav.Link>
+              </Nav.Item>
               <Nav.Item>
                 <Nav.Link
                   as={Link}

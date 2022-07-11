@@ -70,6 +70,9 @@ html {
   padding: 0.3rem 2rem ;
   font-size: 1.2rem ;
 }
+.contactEmail{
+  background-color: rgb(10, 4, 22);
+}
 .footer {
   background-color: rgb(10, 4, 22);
   bottom: 0 ;
