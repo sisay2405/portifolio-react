@@ -16,17 +16,17 @@ import ResumeNew from "./components/Resume/ResumeNew";
 
 const App = () => {
   const dispatch = useDispatch();
-  const { load } = useSelector((state) => state.search, shallowEqual);
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      dispatch(setLoad(false));
-    }, 1200);
+  const { load } = useSelector((state) => state.loader, shallowEqual);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     dispatch(setLoad(false));
+  //   }, 1000);
 
-    return () => clearTimeout(timer);
-  }, [dispatch]);
+  //   return () => clearTimeout(timer);
+  // }, [dispatch]);
   return (
     <>
-      <Preloader load={load} />
+      <Preloader />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <Routes>
           <Route path="/" element={<Layout />}>
