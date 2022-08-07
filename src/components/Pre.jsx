@@ -1,6 +1,9 @@
 import React from "react";
-function Pre(props) {
-  return <div id={props.load ? "preloader" : "preloader-none"}></div>;
+import { useSelector, shallowEqual } from "react-redux";
+function Pre() {
+  const { load } = useSelector((state) => state.loader, shallowEqual);
+  
+  return <div id={load ? "preloader" : "preloader-none"}>loading</div>;
 }
 
 export default Pre;

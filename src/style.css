@@ -37,7 +37,7 @@ button:focus {
 /* --------- */
 /*  Preloader */
 /* --------- */
-#preloader {
+/* #preloader {
   position: fixed;
   top: 0;
   left: 0;
@@ -48,11 +48,65 @@ button:focus {
   background-image: url(./Assets/pre.svg);
   background-repeat: no-repeat;
   background-position: center;
+} */
+*::after, *::before{
+  box-sizing: border-box;
 }
-
-#preloader-none {
+#preloader {
+  position: relative;
+  display: flex;
+  width: 500px;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  overflow: hidden;
+animation: text-color 2s ease-in-out infinite alternate;
+}
+#preloader::before,
+#preloader::after{
+content: "";
+position: absolute;
+width: 100%;
+height: 100%;
+border-radius: 50%;
+border: 15px solid transparent;
+mix-blend-mode: overlay;
+animation: rotate var(--duration) var(--timing) infinite;
+pointer-events: none;
+}
+#preload::before{
+  border-left-color: lightseagreen;
+  --duration:2s;
+  --timing: ease-in;
+}
+#preload::after{
+  border-left-color: rgb(178, 98, 32);
+  --duration:2s;
+  --timing: ease-in;
+}
+@keyframes rotate{
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+@keyframes text-color{
+  0%{
+    color:rgba(0, 0, 0, 1)
+  }
+  50%{
+    color:rgba(0, 0, 0, .5)
+  }
+  100%{
+    color:rgba(0, 0, 0, .1)
+  }
+}
+/* #preloader-none {
   opacity: 0;
-}
+} */
 
 #no-scroll {
   overflow: hidden;
