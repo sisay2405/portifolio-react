@@ -79,7 +79,7 @@ function NavBar() {
                   to="/"
                   onClick={() => dispatch(setExpanded(false))}
                 >
-                  <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
+                  <AiOutlineHome style={{ marginBottom: "2px" }} /> Home deployed
                 </Nav.Link>
               </Nav.Item>
 

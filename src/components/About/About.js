@@ -16,10 +16,10 @@ const Aboutwrapper = styled.section`
   background-image: var(--section-background-color) ;
   color: white ;
   .project-heading {
-    // color: white;
-    // font-size: 2.3em ;
-    // font-weight: 500 ;
-    // padding-top: 10px ;
+    color: white;
+    font-size: 2.3em ;
+    font-weight: 500 ;
+   padding-top: 10px ;
   }
 `
 function About() {
