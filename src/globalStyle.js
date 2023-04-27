@@ -1,12 +1,13 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 html {
-    --section-background-color: linear-gradient(
-      to bottom left,
-      rgba(17, 16, 16, 0.582),
-      rgba(12, 8, 24, 0.904)
-    );
+    // --section-background-color: linear-gradient(
+    //   to bottom left,
+    //   rgba(17, 16, 16, 0.582),
+    //   rgba(12, 8, 24, 0.904)
+    // );
+    background-color: "#050816";;
   
     --image-gradient: linear-gradient(
       to bottom left,

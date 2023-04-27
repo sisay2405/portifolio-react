@@ -7,7 +7,6 @@ import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import logo from "../Assets/sisay.jpg";
 import Button from "react-bootstrap/Button";
-import { Link } from "react-router-dom";
 import { CgGitFork } from "react-icons/cg";
 import {
   AiFillStar,
@@ -20,6 +19,10 @@ import { CgFileDocument } from "react-icons/cg";
 import styled from "styled-components";
 const HeaderWrapper = styled.div`
   background-color: rgb(10, 4, 22);
+  display: flex;
+  align-items: center;
+  z-index:2;
+
 `;
 function NavBar() {
   const dispatch = useDispatch();
@@ -28,34 +31,33 @@ function NavBar() {
     shallowEqual
   );
   function scrollHandler() {
-    if (window.scrollY >= 20) {
+    if (window.scrollY >= 200) {
       dispatch(setNavColor(true));
     } else {
-      dispatch(setNavColor(true));
+      dispatch(setNavColor(false));
     }
   }
 
-  window.addEventListener("scroll", scrollHandler);
+   window.addEventListener("scroll", scrollHandler);
 
   return (
-    <HeaderWrapper className="footer">
+    <HeaderWrapper  id="home">
       <Navbar
         expanded={expand}
         fixed="top"
         expand="md"
         className={navColor ? "sticky" : "navbar"}
       >
-        <Container>
+        <Container  >
           <Navbar.Brand href="/" className="d-flex">
             <img
               src={logo}
               style={{
-                borderBottomLeftRadius: 20,
-                borderTopLeftRadius: 20,
-                borderBottomRightRadius: 20,
-                borderTopRightRadius: 20,
+                borderRadius:"50%",
                 height: 50,
-                width: 60,
+                width: 50,
+                objectFit: 'cover',
+                border:'2px soild ##804dee'
               }}
               className="logo"
               alt="brand"
@@ -72,56 +74,49 @@ function NavBar() {
             <span></span>
           </Navbar.Toggle>
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="ms-auto" defaultActiveKey="#home">
+            <Nav className="ms-auto " defaultActiveKey="#home">
               <Nav.Item>
-                <Nav.Link
-                  as={Link}
-                  to="/"
+                <a href="#home"
+                  
                   onClick={() => dispatch(setExpanded(false))}
                 >
-                  <AiOutlineHome style={{ marginBottom: "2px" }} /> Home deployed
-                </Nav.Link>
+                  <AiOutlineHome style={{ marginBottom: "2px" }} />Home
+                </a>
               </Nav.Item>
 
               <Nav.Item>
-                <Nav.Link
-                  as={Link}
-                  to="/about"
+                <a href="#about"
+                
                   onClick={() => dispatch(setExpanded(false))}
                 >
                   <AiOutlineUser style={{ marginBottom: "2px" }} /> About
-                </Nav.Link>
+                </a>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link
-                  as={Link}
-                  to="/contact"
+                <a href="#contact"  
                   onClick={() => dispatch(setExpanded(false))}
                 >
                   <AiOutlineUser style={{ marginBottom: "2px" }} /> Contact
-                </Nav.Link>
+                </a>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link
-                  as={Link}
-                  to="/project"
+                <a href="#project"
                   onClick={() => dispatch(setExpanded(false))}
                 >
                   <AiOutlineFundProjectionScreen
                     style={{ marginBottom: "2px" }}
                   />{" "}
                   Projects
-                </Nav.Link>
+                </a>
               </Nav.Item>
 
               <Nav.Item>
-                <Nav.Link
-                  as={Link}
-                  to="/resume"
+                <a href="#resume"
+                
                   onClick={() => dispatch(setExpanded(false))}
                 >
                   <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
-                </Nav.Link>
+                </a>
               </Nav.Item>
               <Nav.Item className="fork-btn">
                 <Button

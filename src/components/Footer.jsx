@@ -49,7 +49,7 @@ function Footer() {
   return (
     <FooterWrapper>
       <Container fluid className="footer">
-        <Row>
+        <Row className="footer-row">
           <Col md="4" className="footer-copywright">
             <h3>Designed and Developed by Sisay Areaya</h3>
           </Col>
@@ -61,21 +61,21 @@ function Footer() {
               <li className="social-icons">
                 <a
                   href="https://github.com/sisay2405"
-                  style={{ color: "white" }}
+                  style={{ color: "black" }}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <AiFillGithub />
+                  <AiFillGithub size={ 20} />
                 </a>
               </li>
               <li className="social-icons">
                 <a
                   href="https://twitter.com"
-                  style={{ color: "white" }}
+                  style={{ color: "#1d98f0" }}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <AiOutlineTwitter />
+                  <AiOutlineTwitter size={ 23}/>
                 </a>
               </li>
               <li className="social-icons">
@@ -85,7 +85,7 @@ function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FaLinkedinIn />
+                  <FaLinkedinIn size={ 20}/>
                 </a>
               </li>
               <li className="social-icons">
@@ -95,7 +95,7 @@ function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <AiFillInstagram />
+                  <AiFillInstagram size={ 20}/>
                 </a>
               </li>
             </ul>
