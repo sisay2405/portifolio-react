@@ -8,11 +8,6 @@ import {
 import { FaLinkedinIn } from "react-icons/fa";
 import styled from "styled-components";
 const FooterWrapper = styled.div`
-  // .social-icons {
-  //   display: inline-block !important;
-  //   padding-right: 15px;
-  //   padding-left: 15px;
-  // }
   .footer-copywright {
     text-align: center !important;
   }

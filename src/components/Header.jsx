@@ -1,7 +1,6 @@
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
-import { setNavColor } from "../store/headerSlice";
-import { setExpanded } from "../store/headerSlice";
+import { setNavColor, setExpanded } from "../store/reducer";
 import { useDispatch, useSelector, shallowEqual } from "react-redux";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
@@ -14,22 +13,23 @@ import {
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
 } from "react-icons/ai";
-
 import { CgFileDocument } from "react-icons/cg";
 import styled from "styled-components";
+
 const HeaderWrapper = styled.div`
   background-color: rgb(10, 4, 22);
   display: flex;
   align-items: center;
-  z-index:2;
-
+  z-index: 2;
 `;
+
 function NavBar() {
   const dispatch = useDispatch();
   const { expand, navColor } = useSelector(
-    (state) => state.search,
+    (state) => state.header,
     shallowEqual
   );
+
   function scrollHandler() {
     if (window.scrollY >= 200) {
       dispatch(setNavColor(true));
@@ -38,26 +38,26 @@ function NavBar() {
     }
   }
 
-   window.addEventListener("scroll", scrollHandler);
+  window.addEventListener("scroll", scrollHandler);
 
   return (
-    <HeaderWrapper  id="home">
+    <HeaderWrapper id="home">
       <Navbar
         expanded={expand}
         fixed="top"
         expand="md"
         className={navColor ? "sticky" : "navbar"}
       >
-        <Container  >
+        <Container>
           <Navbar.Brand href="/" className="d-flex">
             <img
               src={logo}
               style={{
-                borderRadius:"50%",
+                borderRadius: "50%",
                 height: 50,
                 width: 50,
-                objectFit: 'cover',
-                border:'2px soild ##804dee'
+                objectFit: "cover",
+                border: "2px solid ##804dee",
               }}
               className="logo"
               alt="brand"
@@ -76,31 +76,33 @@ function NavBar() {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto " defaultActiveKey="#home">
               <Nav.Item>
-                <a href="#home"
-                  
+                <a
+                  href="#home"
                   onClick={() => dispatch(setExpanded(false))}
                 >
-                  <AiOutlineHome style={{ marginBottom: "2px" }} />Home
+                  <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
                 </a>
               </Nav.Item>
 
               <Nav.Item>
-                <a href="#about"
-                
+                <a
+                  href="#about"
                   onClick={() => dispatch(setExpanded(false))}
                 >
                   <AiOutlineUser style={{ marginBottom: "2px" }} /> About
                 </a>
               </Nav.Item>
               <Nav.Item>
-                <a href="#contact"  
+                <a
+                  href="#contact"
                   onClick={() => dispatch(setExpanded(false))}
                 >
                   <AiOutlineUser style={{ marginBottom: "2px" }} /> Contact
                 </a>
               </Nav.Item>
               <Nav.Item>
-                <a href="#project"
+                <a
+                  href="#project"
                   onClick={() => dispatch(setExpanded(false))}
                 >
                   <AiOutlineFundProjectionScreen
@@ -111,13 +113,13 @@ function NavBar() {
               </Nav.Item>
 
               <Nav.Item>
-                <a href="#resume"
-                
+                <a
+                  href="#resume"
                   onClick={() => dispatch(setExpanded(false))}
                 >
                   <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
                 </a>
-              </Nav.Item>
+                </Nav.Item>
               <Nav.Item className="fork-btn">
                 <Button
                   href="https://github.com/sisay2405/portifolio-react"

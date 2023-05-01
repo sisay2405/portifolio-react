@@ -7,7 +7,6 @@ export const themeSlice = createSlice({
   },
   reducers: {
     toggleTheme(state, action) {
-      // eslint-disable-next-line no-param-reassign
       state.value = state.value === 'sisay' ? 'portifolio' : 'sisay';
     },
   },

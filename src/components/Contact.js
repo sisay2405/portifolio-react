@@ -5,28 +5,6 @@ import SubHeader from "./SubHeader";
 import { motion } from "framer-motion";
 import { slideIn } from "../utils/motion";
 const Contact = () => {
-	// const form = useRef();
-	// const sendEmail = (e) => {
-	// 	e.preventDefault();
-	// 	// emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
-	// 	emailjs
-	// 		.sendForm(
-	// 			"service_1iy08ca",
-	// 			"template_vv1d4nn",
-	// 			form.current,
-	//
-	// 		)
-	// 		.then(
-	// 			(result) => {
-	// 				console.log(result.text);
-	// 			},
-	// 			(error) => {
-	// 				console.log(error.text);
-	// 			}
-	// 		);
-	// 	e.target.reset();
-	// };
-
 	const formRef = useRef();
 	const [form, setForm] = useState({
 		name: "",
@@ -135,7 +113,7 @@ const ContactWrapper = styled.div`
 			width: 50%;
 			margin: auto;
 			margin: 20px;
-			dispay: flex;
+			/* dispay: flex; */
 			label {
 				display: flex;
 				flex-direction: column;

@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import homeLogo from "../../Assets/sisay.jpg";
-import myImage from "../../Assets/home-bg.jpg";
 import Home2 from "./Home2";
 import Type from "./Type";
 import styled from "styled-components";
@@ -11,13 +10,10 @@ const HomeWrapper = styled.div`
 	.home-section {
 		position: relative;
 		z-index: -1;
-		/* background-image: var(--image-gradient), url(${myImage}); */
 		background-position: top center;
 		background-repeat: no-repeat;
 		padding-bottom: 30px;
-		padding-top: 30px; 
-  
-    
+		padding-top: 30px;
 	}
 
 	.home-content {
@@ -36,10 +32,11 @@ const HomeWrapper = styled.div`
 		color: #f8d95f;
 	}
 `;
-const Side = styled.div`
-	height: 224px;
-	width: 10px;
-`;
+
+// const Side = styled.div`
+// 	height: 224px;
+// 	width: 10px;
+// `;
 
 function Home() {
 	return (
@@ -64,7 +61,7 @@ function Home() {
 									<Type />
 								</div>
 							</Col>
-							<Col md={5} style={{ paddingBottom: 20 }}>
+							<Col md={5} className="d-flex justify-content-center align-items-center">
 								<img
 									src={homeLogo}
 									alt="home pic"
