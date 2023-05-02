@@ -7,7 +7,7 @@ import styled from "styled-components";
 
 function Projects() {
 	return (
-		<div id="project">
+		<div className="container" id="project">
 			<ProjectWrapper>
 				<SubHeader subHeader="My Recent Works" />
 				<div className="project-card">

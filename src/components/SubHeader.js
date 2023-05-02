@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { textVariant } from "../utils/motion";
-const SubHeader = ({ header, subHeader }) => {
+const SubHeader = ({ subHeader }) => {
 	return (
 		<>
 			<motion.div variants={textVariant()}>

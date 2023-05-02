@@ -62,7 +62,7 @@ const Contact = () => {
 	};
 
 	return (
-		<ContactWrapper>
+		<ContactWrapper className="container">
 			<motion.div
 				variants={slideIn("left", "tween", 0.2, 1)}
 				className="contact"

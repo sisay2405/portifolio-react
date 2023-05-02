@@ -1,7 +1,4 @@
-import React, { useEffect } from "react";
-
-import { setLoad } from "./store/loadSlice";
-import { useDispatch, useSelector, shallowEqual } from "react-redux";
+import React from "react";
 import Projects from "./components/Projects/Projects";
 import Hero from "./components/Home/Hero";
 import Header from "./components/Header";
@@ -13,18 +10,8 @@ import Footer from "./components/Footer";
 import GlobalStyle from "./GlobalStyle";
 
 const App = () => {
-  const dispatch = useDispatch();
-  const { load } = useSelector((state) => state.loader, shallowEqual);
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      dispatch(setLoad(false));
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, [dispatch]);
   return (
     <>
-      <div className="App" id={load ? "no-scroll" : "scroll"}>
       <GlobalStyle />
         <Header />
         <Hero />
@@ -33,7 +20,6 @@ const App = () => {
         <Contact />
         <ResumeNew />
         <Footer />
-      </div>
     </>
   );
 };

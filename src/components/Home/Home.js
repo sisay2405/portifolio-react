@@ -32,12 +32,6 @@ const HomeWrapper = styled.div`
 		color: #f8d95f;
 	}
 `;
-
-// const Side = styled.div`
-// 	height: 224px;
-// 	width: 10px;
-// `;
-
 function Home() {
 	return (
 		<HomeWrapper>
