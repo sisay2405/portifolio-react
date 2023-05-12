@@ -6,14 +6,14 @@ import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import logo from "../Assets/sisay.jpg";
 import Button from "react-bootstrap/Button";
-import { CgGitFork } from "react-icons/cg";
 import {
-  AiFillStar,
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
+  AiFillGithub,
 } from "react-icons/ai";
 import { CgFileDocument } from "react-icons/cg";
+import pdf from "../Assets/sisres.pdf";
 import styled from "styled-components";
 
 const HeaderWrapper = styled.div`
@@ -94,14 +94,6 @@ function NavBar() {
               </Nav.Item>
               <Nav.Item>
                 <a
-                  href="#contact"
-                  onClick={() => dispatch(setExpanded(false))}
-                >
-                  <AiOutlineUser style={{ marginBottom: "2px" }} /> Contact
-                </a>
-              </Nav.Item>
-              <Nav.Item>
-                <a
                   href="#project"
                   onClick={() => dispatch(setExpanded(false))}
                 >
@@ -111,11 +103,18 @@ function NavBar() {
                   Projects
                 </a>
               </Nav.Item>
-
               <Nav.Item>
                 <a
-                  href="#resume"
+                  href="#contact"
                   onClick={() => dispatch(setExpanded(false))}
+                >
+                  <AiOutlineUser style={{ marginBottom: "2px" }} /> Contact
+                </a>
+              </Nav.Item>
+              <Nav.Item>
+                <a
+                  href={pdf} target="_blank"
+                  onClick={() => dispatch(setExpanded(false))} rel="noreferrer"
                 >
                   <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
                 </a>
@@ -126,8 +125,7 @@ function NavBar() {
                   target="_blank"
                   className="fork-btn-inner"
                 >
-                  <CgGitFork style={{ fontSize: "1.2em" }} />{" "}
-                  <AiFillStar style={{ fontSize: "1.1em" }} />
+                  <AiFillGithub style={{ fontSize: "1.2em" }} />
                 </Button>
               </Nav.Item>
             </Nav>
