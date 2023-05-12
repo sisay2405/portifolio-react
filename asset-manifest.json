@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/portifolio-react/static/css/main.2b38c98a.css",
+    "main.js": "/portifolio-react/static/js/main.270aa63e.js",
+    "static/media/restaurant.png": "/portifolio-react/static/media/restaurant.4969d68e076f6e2acb2a.png",
+    "static/media/coffeeExport.png": "/portifolio-react/static/media/coffeeExport.f744570a1db6e412184a.png",
+    "static/media/Amazon.png": "/portifolio-react/static/media/Amazon.690545df5a3c9d0fd002.png",
+    "static/media/employee.png": "/portifolio-react/static/media/employee.2c18d4514c6907fbec7c.png",
+    "static/media/Numberguesser.png": "/portifolio-react/static/media/Numberguesser.7a0366070e4b1bfb8bad.png",
+    "static/media/sisres.pdf": "/portifolio-react/static/media/sisres.177974cb33089afb1cd8.pdf",
+    "static/media/about.png": "/portifolio-react/static/media/about.aee0f771fbfc1e7b8fa8.png",
+    "static/media/weatherapp.png": "/portifolio-react/static/media/weatherapp.dae67c9a6aa2a6d8bb48.png",
+    "static/media/8majicball.png": "/portifolio-react/static/media/8majicball.a55cbaf08086a034ef2a.png",
+    "static/media/sisay.jpg": "/portifolio-react/static/media/sisay.0eaa1bb868eb78496bc1.jpg",
+    "static/media/Hero.png": "/portifolio-react/static/media/Hero.79a3010319ad63df4273.png",
+    "index.html": "/portifolio-react/index.html",
+    "main.2b38c98a.css.map": "/portifolio-react/static/css/main.2b38c98a.css.map",
+    "main.270aa63e.js.map": "/portifolio-react/static/js/main.270aa63e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2b38c98a.css",
+    "static/js/main.270aa63e.js"
+  ]
+}
