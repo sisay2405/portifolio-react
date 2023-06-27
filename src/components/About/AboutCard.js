@@ -3,7 +3,7 @@ import Card from "react-bootstrap/Card";
 import styled from "styled-components";
 
 const AboutCardWrapper = styled.div`
-	margin: 90px 0px;
+	margin: 91px 0px;
 	.quote-card-view {
 		border: none;
 		color: white;
